@@ -203,7 +203,33 @@ getNStops <- function(inDF){
 
 getTourDur <- function(inDF){
 	time = rep(0,nrow(inDF))
-	if(inDF$tourpurp[i]==1){			time[i]=inDF$datimeo[i]+inDF$datimei[i]}	if(inDF$tourpurp[i]==2|| inDF$tourpurp[i]==3){			time[i]=inDF$sr_timeo[i]+inDF$sr_timei[i]}	if(inDF$tourpurp[i]==4){			time[i]=inDF$otwivt_b[i]+inDF$itwivt_b[i]+inDF$otwivt_lb[i]+inDF$itwivt_lb[i]+inDF$otwivt_exp[i]+inDF$itwivt_exp[i]+inDF$otwivt_lrt[i]+inDF$itwivt_lrt[i]+inDF$otwivt_crt[i]+inDF$itwivt_crt[i]+inDF$otwwait1[i]+inDF$itwwait1[i]+inDF$otwwait2[i]+inDF$itwwait2[i]+inDF$otwwalkt[i]+inDF$itwwalkt[i]}}		inDF$otwivt_lb[i]+inDF$itwivt_lb[i]+		inDF$otwivt_exp[i]+inDF$itwivt_exp[i]+		inDF$otwivt_lrt[i]+inDF$itwivt_lrt[i]+		inDF$otwivt_crt[i]+inDF$itwivt_crt[i]+		inDF$otwwait1[i]+inDF$itwwait1[i]+		inDF$otwwait2[i]+inDF$itwwait2[i]+		inDF$otwwalkt[i]+inDF$itwwalkt[i]}	if(inDF$tourpurp[i]==5){			time[i]=inDF$otdivt_b[i]+inDF$itdivt_b[i]+inDF$otdivt_lb[i]+inDF$itdivt_lb[i]+inDF$otdivt_exp[i]+inDF$itdivt_exp[i]+inDF$otdivt_lrt[i]+inDF$itdivt_lrt[i]+inDF$otdivt_crt[i]+inDF$itdivt_crt[i]+inDF$otdwait1[i]+inDF$itdwait1[i]+inDF$otdwait2[i]+inDF$itdwait2[i]+inDF$otdwalkt[i]+inDF$itdwalkt[i]+}		inDF$otdivt_lb[i]+inDF$itdivt_lb[i]+		inDF$otdivt_exp[i]+inDF$itdivt_exp[i]+		inDF$otdivt_lrt[i]+inDF$itdivt_lrt[i]+		inDF$otdivt_crt[i]+inDF$itdivt_crt[i]+		inDF$otdwait1[i]+inDF$itdwait1[i]+		inDF$otdwait2[i]+inDF$itdwait2[i]+		inDF$otdwalkt[i]+inDF$itdwalkt[i]+		inDF$otddrv_t[i]+inDF$itddrv_t[i]}	if(inDF$tourpurp[i]==7){			time[i]=inDF$obiketime[i]+inDF$ibiketime[i]}	if(inDF$tourpurp[i]==8){			time[i]=inDF$owalk_t[i]+inDF$iwalk_t[i]}
+	if(inDF$tourpurp[i]==1){	
+		time[i]=inDF$datimeo[i]+inDF$datimei[i]}
+	if(inDF$tourpurp[i]==2|| inDF$tourpurp[i]==3){	
+		time[i]=inDF$sr_timeo[i]+inDF$sr_timei[i]}
+	if(inDF$tourpurp[i]==4){	
+		time[i]=inDF$otwivt_b[i]+inDF$itwivt_b[i]+inDF$otwivt_lb[i]+inDF$itwivt_lb[i]+inDF$otwivt_exp[i]+inDF$itwivt_exp[i]+inDF$otwivt_lrt[i]+inDF$itwivt_lrt[i]+inDF$otwivt_crt[i]+inDF$itwivt_crt[i]+inDF$otwwait1[i]+inDF$itwwait1[i]+inDF$otwwait2[i]+inDF$itwwait2[i]+inDF$otwwalkt[i]+inDF$itwwalkt[i]}}
+		inDF$otwivt_lb[i]+inDF$itwivt_lb[i]+
+		inDF$otwivt_exp[i]+inDF$itwivt_exp[i]+
+		inDF$otwivt_lrt[i]+inDF$itwivt_lrt[i]+
+		inDF$otwivt_crt[i]+inDF$itwivt_crt[i]+
+		inDF$otwwait1[i]+inDF$itwwait1[i]+
+		inDF$otwwait2[i]+inDF$itwwait2[i]+
+		inDF$otwwalkt[i]+inDF$itwwalkt[i]}
+	if(inDF$tourpurp[i]==5){	
+		time[i]=inDF$otdivt_b[i]+inDF$itdivt_b[i]+inDF$otdivt_lb[i]+inDF$itdivt_lb[i]+inDF$otdivt_exp[i]+inDF$itdivt_exp[i]+inDF$otdivt_lrt[i]+inDF$itdivt_lrt[i]+inDF$otdivt_crt[i]+inDF$itdivt_crt[i]+inDF$otdwait1[i]+inDF$itdwait1[i]+inDF$otdwait2[i]+inDF$itdwait2[i]+inDF$otdwalkt[i]+inDF$itdwalkt[i]+}
+		inDF$otdivt_lb[i]+inDF$itdivt_lb[i]+
+		inDF$otdivt_exp[i]+inDF$itdivt_exp[i]+
+		inDF$otdivt_lrt[i]+inDF$itdivt_lrt[i]+
+		inDF$otdivt_crt[i]+inDF$itdivt_crt[i]+
+		inDF$otdwait1[i]+inDF$itdwait1[i]+
+		inDF$otdwait2[i]+inDF$itdwait2[i]+
+		inDF$otdwalkt[i]+inDF$itdwalkt[i]+
+		inDF$otddrv_t[i]+inDF$itddrv_t[i]}
+	if(inDF$tourpurp[i]==7){	
+		time[i]=inDF$obiketime[i]+inDF$ibiketime[i]}
+	if(inDF$tourpurp[i]==8){	
+		time[i]=inDF$owalk_t[i]+inDF$iwalk_t[i]}
 		
 	return(time)
 }
@@ -275,4 +301,8 @@ distCat <- function(inDF){
 	}
 
 	return(dcat)
+}
+
+quickExport <- function(df, name="temp"){
+	write.csv(df,paste(name,".csv",sep=""))
 }
